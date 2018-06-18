@@ -1,0 +1,27 @@
+{
+  "name": "js_benchmarks",
+  "version": "1.0.0",
+  "description": "Benchmarks in JS for developers that wants to create the most effective code!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baradm100/JS_Benchmarks.git"
+  },
+  "keywords": [
+    "JS",
+    "Node",
+    "benchmark"
+  ],
+  "author": "Bar Admoni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/baradm100/JS_Benchmarks/issues"
+  },
+  "homepage": "https://github.com/baradm100/JS_Benchmarks#readme",
+  "dependencies": {
+    "benchmark": "^2.1.4"
+  }
+}
