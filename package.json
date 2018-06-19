@@ -2,8 +2,9 @@
   "name": "js_benchmarks",
   "version": "1.0.0",
   "description": "Benchmarks in JS for developers that wants to create the most effective code!",
-  "main": "index.js",
+  "main": "cli.js",
   "scripts": {
+    "start": "node cli",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/baradm100/JS_Benchmarks#readme",
   "dependencies": {
-    "benchmark": "^2.1.4"
+    "benchmark": "^2.1.4",
+    "keypress": "^0.2.1"
   }
 }

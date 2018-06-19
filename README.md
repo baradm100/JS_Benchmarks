@@ -7,12 +7,14 @@ Enjoy!
 ## Table of Content
 
 * [Summery](#summery)
+* [How to run](#how-to-run)
 * [Create Regex](#create-regex)
 * [String Starts With](#string-starts-with)
 * [Read File](#read-file)
 * [Credits](#credits)
 * [Hardware](#hardware)
 * [Contributes](#contributes)
+* [License](#license)
 
 ## Summery
 
@@ -21,6 +23,14 @@ Category           | Winner                      | ops/sec
 Create Regex       | Hard coded regex            | 668,945,850
 String Starts With | String#substring            | 21,021,430
 Read File          | fs#readFileSync,fs#readFile | 1.91
+
+## How to Run
+
+You can easily run the code yourself by choosing the benchmark from the CLI menu. To run the CLI menu just type:
+
+```bash
+$ npm run
+```
 
 ## Create Regex
 
@@ -80,3 +90,7 @@ RAM     | 16 GB DDR3
 PR and suggestions are more the welcome!
 
 If you have a new benchmark or new test that I overlooked open an Issue and PR with the changes
+
+## License
+
+MIT License, read more [here](/LICENSE).

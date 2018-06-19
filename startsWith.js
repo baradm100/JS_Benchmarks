@@ -1,5 +1,6 @@
 const Benchmark = require('benchmark');
 
+// Creating dummy string that will look like: "test,some other,some other,some other,some other,some other,some other..."
 let a = ["test"];
 for (let i = 0; i < 10000; i++) {
 	a.push("some other stuff");
@@ -7,10 +8,9 @@ for (let i = 0; i < 10000; i++) {
 let s = a.join();
 let re1 = new RegExp("^test");
 let re2 = new RegExp("^not there");
-
 let suite = new Benchmark.Suite();
 
-// add tests
+// Add tests
 suite.add('String#indexOf', function () {
 		let r1 = (s.indexOf("test") === 0);
 		let r2 = (s.indexOf("not there") === 0);
@@ -39,14 +39,14 @@ suite.add('String#indexOf', function () {
 		let r1 = s.startsWith('test');
 		let r2 = s.startsWith('not there');
 	})
-	// add listeners
+	// Add listeners
 	.on('cycle', function (event) {
 		console.log(String(event.target));
 	})
 	.on('complete', function () {
 		console.log(`Fastest is ${this.filter('fastest').map('name')}`);
 	})
-	// run async
+	// Run async
 	.run({
-		'async': true
+		async: true
 	});
