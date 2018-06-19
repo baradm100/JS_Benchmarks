@@ -3,8 +3,12 @@ const Benchmark = require('benchmark');
 const readline = require('readline');
 const filePath = './testFile.txt'
 const expectedFileSize = 1000010000;
+let suite = new Benchmark.Suite();
 
-let generateFile = function () {
+/**
+ * Generating a test file
+ */
+function generateFile() {
     for (let i = 0; i < 10000; i++) {
         let string = "";
         for (let j = 0; j < 10000; j++) {
@@ -23,9 +27,7 @@ if (!fs.existsSync(filePath)) {
     generateFile();
 }
 
-let suite = new Benchmark.Suite();
-
-// add tests
+// Add tests
 suite.add('fs#readFileSync', function () {
         let string = fs.readFileSync(filePath);
     })
@@ -48,14 +50,14 @@ suite.add('fs#readFileSync', function () {
         // a flag to indicate the benchmark is deferred
         defer: true
     })
-    // add listeners
+    // Add listeners
     .on('cycle', function (event) {
         console.log(String(event.target));
     })
     .on('complete', function () {
         console.log(`Fastest is ${this.filter('fastest').map('name')}`);
     })
-    // run async
+    // Run async
     .run({
-        'async': true
+        async: true
     });
