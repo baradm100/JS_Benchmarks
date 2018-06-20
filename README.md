@@ -11,6 +11,8 @@ Enjoy!
 * [Create Regex](#create-regex)
 * [String Starts With](#string-starts-with)
 * [Read File](#read-file)
+* [Math](#math)
+    * [Power](#power)
 * [Credits](#credits)
 * [Hardware](#hardware)
 * [Contributes](#contributes)
@@ -23,6 +25,7 @@ Category           | Winner                      | ops/sec
 Create Regex       | Hard coded regex            | 668,945,850
 String Starts With | String#substring            | 21,021,430
 Read File          | fs#readFileSync,fs#readFile | 1.91
+Math - Power       |
 
 ## How to Run
 
@@ -70,6 +73,20 @@ fs#readFileSync x 1.92 ops/sec ±0.39% (9 runs sampled)
 fs#readFile x 1.91 ops/sec ±0.54% (14 runs sampled)
 readline x 0.23 ops/sec ±0.50% (6 runs sampled)
 Fastest is fs#readFileSync,fs#readFile
+```
+
+## Math
+
+### Power
+
+What is the most effective way to read a file? Power by **!
+
+#### Output
+
+```
+Math#pow x 640,743,171 ops/sec ±0.46% (93 runs sampled)
+Power by ** x 648,307,080 ops/sec ±0.39% (91 runs sampled)
+Fastest is Power by **
 ```
 
 ## Credits

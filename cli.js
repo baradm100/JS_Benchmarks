@@ -3,7 +3,8 @@ let currentIndex = 0;
 let menuItems = [
     ['Create Regex', './createRegex.js'],
     ['String Starts With', './startsWith.js'],
-    ['Read File', './readFile.js']
+    ['Read File', './readFile.js'],
+    ['Math - Power', './math/pow.js']
 ];
 
 // Make `process.stdin` begin emitting "keypress" events
