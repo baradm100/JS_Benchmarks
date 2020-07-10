@@ -6,26 +6,26 @@ Enjoy!
 
 ## Table of Content
 
-* [Summery](#summery)
-* [How to run](#how-to-run)
-* [Create Regex](#create-regex)
-* [String Starts With](#string-starts-with)
-* [Read File](#read-file)
-* [Math](#math)
-    * [Power](#power)
-* [Credits](#credits)
-* [Hardware](#hardware)
-* [Contributes](#contributes)
-* [License](#license)
+- [Summery](#summery)
+- [How to run](#how-to-run)
+- [Create Regex](#create-regex)
+- [String Starts With](#string-starts-with)
+- [Read File](#read-file)
+- [Math](#math)
+  - [Power](#power)
+- [Credits](#credits)
+- [Hardware](#hardware)
+- [Contributes](#contributes)
+- [License](#license)
 
 ## Summery
 
-Category           | Winner                      | ops/sec
------------------- | --------------------------- | --------
-Create Regex       | Hard coded regex            | 668,945,850
-String Starts With | String#substring            | 21,021,430
-Read File          | fs#readFileSync,fs#readFile | 1.91
-Math - Power       |
+| Category           | Winner                      | ops/sec     |
+| ------------------ | --------------------------- | ----------- |
+| Create Regex       | Hard coded regex            | 668,945,850 |
+| String Starts With | String#substring            | 21,021,430  |
+| Read File          | fs#readFileSync,fs#readFile | 1.91        |
+| Math - Power       | Power by \*\*               | 648,307,080 |
 
 ## How to Run
 
@@ -79,7 +79,7 @@ Fastest is fs#readFileSync,fs#readFile
 
 ### Power
 
-What is the most effective way to read a file? Power by **!
+What is the most effective way to read a file? Power by \*\*!
 
 #### Output
 
@@ -95,12 +95,12 @@ Most (if not all) the startsWith benchmark was originally written by [@dai-shi](
 
 ## Hardware
 
-Type    |  Value
---------|--------
-Node.js | v9.6.0
-OS      | Windows 7 64bit
-CPU     | i7 4770 4 cores with hyper thread (Clock speed: 340GHz)
-RAM     | 16 GB DDR3
+| Type    | Value                                                   |
+| ------- | ------------------------------------------------------- |
+| Node.js | v9.6.0                                                  |
+| OS      | Windows 7 64bit                                         |
+| CPU     | i7 4770 4 cores with hyper thread (Clock speed: 340GHz) |
+| RAM     | 16 GB DDR3                                              |
 
 ## Contributes
 
