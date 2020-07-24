@@ -6,26 +6,26 @@ Enjoy!
 
 ## Table of Content
 
-- [Summery](#summery)
-- [How to run](#how-to-run)
-- [Create Regex](#create-regex)
-- [String Starts With](#string-starts-with)
-- [Read File](#read-file)
-- [Math](#math)
-  - [Power](#power)
-- [Credits](#credits)
-- [Hardware](#hardware)
-- [Contributes](#contributes)
-- [License](#license)
+-   [Summery](#summery)
+-   [How to run](#how-to-run)
+-   [Create Regex](#create-regex)
+-   [String Starts With](#string-starts-with)
+-   [Read File](#read-file)
+-   [Math](#math)
+    -   [Power](#power)
+-   [Credits](#credits)
+-   [Hardware](#hardware)
+-   [Contributes](#contributes)
+-   [License](#license)
 
 ## Summery
 
 | Category           | Winner                      | ops/sec     |
 | ------------------ | --------------------------- | ----------- |
-| Create Regex       | Hard coded regex            | 668,945,850 |
-| String Starts With | String#substring            | 21,021,430  |
-| Read File          | fs#readFileSync,fs#readFile | 1.91        |
-| Math - Power       | Power by \*\*               | 648,307,080 |
+| Create Regex       | Hard coded regex            | 811,885,533 |
+| String Starts With | String#substring            | 835,000,457 |
+| Read File          | fs#readFileSync,fs#readFile | 1.61        |
+| Math - Power       | Power by \*\*               | 824,394,518 |
 
 ## How to Run
 
@@ -42,8 +42,8 @@ What is the most effective way to create regex? Hard coded!
 ### Output
 
 ```
-RegExp#new x 8,217,197 ops/sec ±1.01% (103 runs sampled)
-hard coded RegExp x 668,945,850 ops/sec ±0.43% (106 runs sampled)
+RegExp#new x 9,653,554 ops/sec ±1.60% (85 runs sampled)
+hard coded RegExp x 811,885,533 ops/sec ±1.65% (84 runs sampled)
 Fastest is hard coded RegExp
 ```
 
@@ -52,13 +52,13 @@ Fastest is hard coded RegExp
 What is the most effective way to find if a string starts with another string? substring!
 
 ```
-String#indexOf x 73,269 ops/sec ±52.79% (86 runs sampled)
-String#lastIndexOf x 8,344,793 ops/sec ±0.97% (90 runs sampled)
-String#substring x 21,021,430 ops/sec ±1.83% (86 runs sampled)
-String#slice x 18,305,956 ops/sec ±1.44% (90 runs sampled)
-RegExp#tests x 12,018,282 ops/sec ±0.32% (92 runs sampled)
-RegExp#tests (compiled) x 14,618,121 ops/sec ±1.03% (90 runs sampled)
-String#startsWith x 7,604,207 ops/sec ±0.52% (92 runs sampled)
+String#indexOf x 803,084,164 ops/sec ±1.31% (87 runs sampled)
+String#lastIndexOf x 17,167,310 ops/sec ±0.92% (87 runs sampled)
+String#substring x 835,000,457 ops/sec ±1.24% (88 runs sampled)
+String#slice x 818,594,603 ops/sec ±1.03% (86 runs sampled)
+RegExp#tests x 18,745,095 ops/sec ±0.79% (84 runs sampled)
+RegExp#tests (compiled) x 23,899,970 ops/sec ±1.17% (87 runs sampled)
+String#startsWith x 29,204,473 ops/sec ±1.10% (87 runs sampled)
 Fastest is String#substring
 ```
 
@@ -69,9 +69,9 @@ What is the most effective way to read a file? fs#readFileSync OR fs#readFile!
 ### Output
 
 ```
-fs#readFileSync x 1.92 ops/sec ±0.39% (9 runs sampled)
-fs#readFile x 1.91 ops/sec ±0.54% (14 runs sampled)
-readline x 0.23 ops/sec ±0.50% (6 runs sampled)
+fs#readFileSync x 1.61 ops/sec ±2.68% (9 runs sampled)
+fs#readFile x 1.60 ops/sec ±2.56% (12 runs sampled)
+readline x 0.18 ops/sec ±4.85% (5 runs sampled)
 Fastest is fs#readFileSync,fs#readFile
 ```
 
@@ -84,8 +84,8 @@ What is the most effective way to read a file? Power by \*\*!
 #### Output
 
 ```
-Math#pow x 640,743,171 ops/sec ±0.46% (93 runs sampled)
-Power by ** x 648,307,080 ops/sec ±0.39% (91 runs sampled)
+Math#pow x 806,111,918 ops/sec ±1.31% (85 runs sampled)
+Power by ** x 824,394,518 ops/sec ±0.94% (87 runs sampled)
 Fastest is Power by **
 ```
 
@@ -95,12 +95,12 @@ Most (if not all) the startsWith benchmark was originally written by [@dai-shi](
 
 ## Hardware
 
-| Type    | Value                                                   |
-| ------- | ------------------------------------------------------- |
-| Node.js | v9.6.0                                                  |
-| OS      | Windows 7 64bit                                         |
-| CPU     | i7 4770 4 cores with hyper thread (Clock speed: 340GHz) |
-| RAM     | 16 GB DDR3                                              |
+| Type    | Value                           |
+| ------- | ------------------------------- |
+| Node.js | v14.4.0                         |
+| OS      | macOS 10.14.6                   |
+| CPU     | Intel i7 (Clock speed: 2.2 GHz) |
+| RAM     | 16 GB DDR4 2400 MHz             |
 
 ## Contributes
 
