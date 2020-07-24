@@ -2,8 +2,8 @@ const Benchmark = require('benchmark');
 
 let suite = new Benchmark.Suite();
 
-// Add tests
-suite.add('Math#pow', function () {
+suite
+    .add('Math#pow', function () {
         let r = Math.pow(2, 100);
     })
     .add('Power by **', function () {
@@ -18,5 +18,5 @@ suite.add('Math#pow', function () {
     })
     // Run async
     .run({
-        async: true
+        async: true,
     });

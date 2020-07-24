@@ -2,9 +2,10 @@ const Benchmark = require('benchmark');
 
 let suite = new Benchmark.Suite();
 
-// Add tests
-suite.add('RegExp#new', function () {
-        let re = new RegExp("a|b", "i");
+// Running the tests
+suite
+    .add('RegExp#new', function () {
+        let re = new RegExp('a|b', 'i');
     })
     .add('hard coded RegExp', function () {
         let re = /a|b/i;
@@ -18,5 +19,5 @@ suite.add('RegExp#new', function () {
     })
     // Run async
     .run({
-        async: true
+        async: true,
     });
